@@ -1,0 +1,257 @@
+body{
+    margin:0;
+    text-align: center;
+}
+.a {
+    width:100%;
+    height:725px;
+    background-image: url("image-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.name {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 400%;
+}
+.about1 {
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Serif JP', serif;
+}
+.nav-cal {
+    font-weight: bolder;
+    font-family: 'Noto Serif JP', serif;
+}
+.gif {
+    margin-left: 0.5%;
+    margin-right: 1% ;
+    background-color: transparent;
+}
+.satvikimage{
+    border-radius: 50%;
+}
+.profile {
+    background-color: #FCEEF5;
+    line-height: 2;
+}
+.pic {
+    height:235px;
+}
+.para {
+    margin:0 20% 0 20%;
+}
+.skills {
+    background-color: #F4FCD9;
+}
+.coding {
+    margin:0 20% 0 20%;
+}
+.code {
+    border-radius: 50%;
+    height: 200px;
+    float: left;
+    margin: 0 5% 0 0;
+}
+.reading {
+    margin:0 20% 0 20%;
+}
+.read {
+    border-radius: 50%;
+    height: 200px;
+    float: right;
+    margin: 0 0 0 5%;
+}
+
+.header {
+    margin: 0 8.5% 0 8.5%;
+    border-radius: 15px;
+    border: 2px solid #D14D72;
+    background-image: url("phone-wallpaper-6153384_1920.jpg");
+}
+@media (min-width: 1100px) {
+    .header2 {
+        margin: 0 40% 2.25% 0;
+        border-radius: 15px;
+    }
+}
+@media (max-width: 1100px) {
+    .header2 {
+        margin: 0 2.25% 2.25% 0;
+        border-radius: 15px;
+    }
+}
+.header-japan {
+    font-family: 'Noto Serif JP', serif;
+    margin: 1.5% 0 0 3%;
+    text-align: justify;
+}
+@media (min-width:770px) {
+    .script {
+        background-color: #FEF2F4;
+        height: 175px;
+        margin: 2.5%;
+        border: 2px solid #D14D72;
+        border-radius: 15px 50px;
+    }
+    .subscripts1 {
+        margin:25% auto 0 auto;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .subscripts2 {
+        font-family: 'Noto Serif JP', serif;
+    }
+}
+@media (max-width:770px) {
+    .script {
+        background-color: #FEF2F4;
+        height: 175px;
+        margin: 5% 21% 5% 21%;
+        border: 2px solid #D14D72;
+        border-radius: 15px 50px;
+    }
+    .subscripts1 {
+        margin:15% auto 0 auto;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .subscripts2 {
+        font-family: 'Noto Serif JP', serif;
+    }
+}
+.header3 {
+    margin: 0 5% 0 0;
+}
+
+  .text {
+    font-family: 'Noto Serif JP', serif;
+    color: white;
+}
+.text2 {
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+.about {
+    margin: 0 20% 0 20%;
+    font-family: 'Noto Serif JP', serif;
+}
+.main {
+    height: 180px;
+    float: left;
+    margin: 0 5% 0 0;
+}
+.code {
+    height: 180px;
+    float: right;
+    margin: 0 0 0 5%;
+}
+.team {
+    height: 180px;
+    float: left;
+    margin: 0 5% 0 0;
+}
+.whatido{
+    font-family: 'Noto Serif JP', serif;
+}
+.whatido1{
+    font-family: 'Noto Serif JP', serif;
+    margin-top: 5%;
+}
+
+.heading01 {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 70px;
+    margin:  0.5%;
+}
+
+.heading02 {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 50px;
+    margin:  0.5%;
+}
+.header20 {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0 20% 0 20%;
+    text-align: justify;
+}
+.header21 {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0 10% 0 10%;
+}
+
+.team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 0 5% 0 0;
+}
+
+.login {
+    background-color: #FEF2F4;
+    height: 175px;
+    margin: 2.5%;
+    border: 2px solid #d1a797;
+    border-radius: 15px 50px;
+}
+.subscripts1 {
+    margin:28% auto 0 auto;
+    font-family: 'Noto Serif JP', serif;
+}
+.grad1 {
+    background-image: linear-gradient(to bottom right,#ffffff, #FEF2F4, #d1a797);
+}
+.grad2 {
+    background-image: linear-gradient(to bottom left,#ffffff, #FEF2F4, #d1a797);
+}
+.grad3 {
+    background-image: linear-gradient(to top left,#ffffff, #FEF2F4, #d1a797);
+}
+
+a:hover{
+        color: #d1a797;
+}
+a:link {
+    color: #5d5c5d;
+    text-decoration: none;
+}
+
+.cpu {
+    background-color: #FEF2F4;
+    border-radius: 15px;
+    border: 2px solid #d1a797;
+    height: 420px;
+}
+
+.cpu1{
+    margin: 0 5% 0 5%;
+}
+
+
+
+
+td {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+}
+th {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+}
+.box1{
+    width: 200px;
+}

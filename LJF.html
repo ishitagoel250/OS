@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="website1.css">
+        <title>Operating Systems</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="grad3">
+
+    <nav class="navbar navbar-expand-sm bg-body-transparent">
+        <div class="container-fluid">
+          <img src="computer-removebg-preview.png" width="45" class="gif">
+          <a class="navbar-brand" href="index.html">OS Lab</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Algorithms</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="FCFS.html">First Come First Serve (FCFS)</a></li>
+                  <li><a class="dropdown-item" href="SJF.html">Shortest Job First (SJF)</a></li>
+                  <li><a class="dropdown-item" href="LJF.html">Longest Job First (LJF)</a></li>
+                  <li><a class="dropdown-item" href="RR.html">Round Robin (RR)</a></li>
+                  <li><a class="dropdown-item" href="PP.html">Priority Preemptive (PP)</a></li>
+                  <li><a class="dropdown-item" href="PNP.html">Compare</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item" ><a class="nav-link active" aria-current="page" href="team.html">Team</a></li>
+              <li class="nav-item" ><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <h1 class="heading01">Longest Job First</h1>
+    <br><br>
+
+      <div class="header20">
+        <h2>LJF</h2>
+        <h4>In LJF Scheduling,Out of all the available processes, CPU is assigned to the process having largest burst time. In case of a tie, it is broken by FCFS scheduling algorithm.<br><br>
+        It is non-preemptive algorithm. This algorithm is based upon the burst time of the processes.<br><br>
+        The processes are put into the ready queue based on their burst times i.e., in a descending order of the burst times.<br><br>
+        As the name suggests this algorithm is based upon the fact that the process with the largest burst time is processed first. The burst time of only those processes is considered that have arrived in the system until that time.</h4>
+
+        <br><br><br>
+        <h3>ADVANTAGES</h3>
+        <h4><ul>
+        <li>The process with the largest burst time is given priority, ensuring that no other process can execute until the longest job or process completes entirely.</li>
+        <li>All processes finish approximately at the same time, which can be beneficial in specific scenarios.</li>
+        </ul></h4>
+
+        <br>
+        <h3>DISADVANTAGES</h3>
+        <h4><ul>
+        <li>LJF algorithm can result in a high average waiting time and average turn-around time for a given set of processes, which can negatively affect system performance.</li>
+        <li>The convoy effect may occur, which means that short processes have to wait for long processes to complete, causing unnecessary delays.</li>
+        <li>It is possible for a short process to never get executed, and the system keeps executing longer processes, which can reduce system efficiency.</li>
+        <li>LJF reduces processing speed, resulting in lower efficiency and utilization of the system.</li>
+        </ul></h4>
+        
+      </div><br><br>
+      
+      <center><a href="LJF-code.html">
+      <button type="button">Click for Simulator</button>
+      </a></center>
+
+<div class="b-example-divider"></div>
+<div class="container">
+  <footer class="py-5">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>Made with ♥️ by <a href="./team.html"> Team Resilience</a></p>
+    </div>
+  </footer>
+</div>
+
+
+</body>
+</html>

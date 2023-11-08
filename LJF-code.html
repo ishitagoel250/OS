@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="website1.css">
+    <title>Operating Systems</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="grad3">
+
+    <nav class="navbar navbar-expand-sm bg-body-transparent">
+        <div class="container-fluid">
+          <img src="computer-removebg-preview.png" width="45" class="gif">
+          <a class="navbar-brand" href="index.html">OS Lab</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Algorithms</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="FCFS.html">First Come First Serve (FCFS)</a></li>
+                  <li><a class="dropdown-item" href="SJF.html">Shortest Job First (SJF)</a></li>
+                  <li><a class="dropdown-item" href="LJF.html">Longest Job First (LJF)</a></li>
+                  <li><a class="dropdown-item" href="RR.html">Round Robin (RR)</a></li>
+                  <li><a class="dropdown-item" href="PP.html">Priority Preemptive (PP)</a></li>
+                  <li><a class="dropdown-item" href="PNP.html">Compare</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item" ><a class="nav-link active" aria-current="page" href="team.html">Team</a></li>
+              <li class="nav-item" ><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <h1 class="heading02">Longest Job First</h1>
+    <h1 class="heading02">CPU Scheduling</h1>
+
+    <br><br>
+
+    <div class="header21">
+
+    <h3>S T E P S</h3><br>
+    <h4>Step 1</h4>
+    <h5>First, sort the processes in increasing order of their Arrival Time.</h5><br>
+    <h4>Step 2</h4>
+    <h5>Choose the process having highest Burst Time among all the processes that have arrived till that time. Then process it for its burst time. Check if any other process arrives until this process completes execution.</h5><br>
+    <h4>Step 3</h4>
+    <h5>Repeat the above both steps until all the processes are executed.</h5><br><br>
+
+
+
+    <h3>Enter the number of processes:</h3><br>
+    <input type="number" id="numProcesses"><br><br>
+    <button onclick="getInputFields()">Submit</button>
+
+    <br><br><br>
+
+    <div id="inputFields"></div>
+    <button onclick="calculateLJF()">Calculate LJF</button>
+
+    <br><br><br><br>
+
+    <h3>LJF Scheduling Results</h3><br>
+    <table id="resultTable">
+        <tr>
+            <th>Process ID</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Waiting Time</th>
+            <th>Start Time</th>
+            <th>Completion Time</th>
+            <th>Turnaround Time</th>
+        </tr>
+    </table>
+
+    </div>
+
+<div class="b-example-divider"></div>
+<div class="container">
+  <footer class="py-5">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>Made with ♥️ by <a href="./team.html"> Team Resilience</a></p>
+    </div>
+  </footer>
+</div>
+
+    <script>
+        let numProcessesInput = document.getElementById("numProcesses");
+        let inputFields = document.getElementById("inputFields");
+        let resultTable = document.getElementById("resultTable");
+        let processList = [];
+
+        function getInputFields() {
+            let numProcesses = parseInt(numProcessesInput.value);
+            let html = '';
+
+            for (let i = 0; i < numProcesses; i++) {
+                html += `
+                <div>
+                    <label for="arrivalTime${i}">Arrival Time for Process ${i + 1}:</label>
+                    <input type="number" id="arrivalTime${i}"><br><br>
+                    <label for="burstTime${i}">Burst Time for Process ${i + 1}:</label>
+                    <input type="number" id="burstTime${i}"><br><br><br>
+                </div>`;
+            }
+
+            inputFields.innerHTML = html;
+        }
+
+        function calculateLJF() {
+            processList = [];
+            resultTable.innerHTML = "<tr><th>Process ID</th><th>Arrival Time</th><th>Burst Time</th><th>Waiting Time</th><th>Start Time</th><th>Completion Time</th><th>Turnaround Time</th></tr>";
+
+            for (let i = 0; i < numProcessesInput.value; i++) {
+                let arrivalTime = parseInt(document.getElementById(`arrivalTime${i}`).value);
+                let burstTime = parseInt(document.getElementById(`burstTime${i}`).value);
+                processList.push({
+                    processID: i + 1,
+                    arrivalTime: arrivalTime,
+                    burstTime: burstTime
+                });
+            }
+
+            processList.sort((a, b) => a.arrivalTime - b.arrivalTime);
+
+            let currentTime = 0;
+
+            while (processList.length > 0) {
+                let longestJob = processList.reduce((prev, current) => {
+                    return (current.arrivalTime <= currentTime && current.burstTime > prev.burstTime) ? current : prev;
+                }, processList[0]);
+
+                let index = processList.indexOf(longestJob);
+                if (index !== -1) {
+                    processList.splice(index, 1);
+                }
+
+                let waitingTime = Math.max(0, currentTime - longestJob.arrivalTime);
+                let startTime = currentTime;
+                let completionTime = currentTime + longestJob.burstTime;
+                let turnaroundTime = completionTime - longestJob.arrivalTime;
+                resultTable.innerHTML += `<tr><td>${longestJob.processID}</td><td>${longestJob.arrivalTime}</td><td>${longestJob.burstTime}</td><td>${waitingTime}</td><td>${startTime}</td><td>${completionTime}</td><td>${turnaroundTime}</td>`;
+                currentTime = completionTime;
+            }
+        }
+    </script>
+</body>
+</html>
