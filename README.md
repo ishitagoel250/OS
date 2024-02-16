@@ -1,1 +1,3 @@
 # OS
+
+CPU Scheduling Algorithms- 
