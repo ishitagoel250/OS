@@ -15,3 +15,5 @@ CPU Scheduling Algorithms-
 3. LJF - Longest Job First
 4. RR - Round Robin
 5. PP - Priority Preemptive
+
+Compare different scheduling algorithms and choose which best fits your needs.
