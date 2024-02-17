@@ -9,6 +9,7 @@ The main task of CPU scheduling is to make sure that whenever the CPU remains id
 The selection process will be carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.
 
 
+
 CPU Scheduling Algorithms- 
 1. FCFS - First Come First Serve
 2. SJF - Shortest Job First
